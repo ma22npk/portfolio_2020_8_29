@@ -18,6 +18,34 @@ $fontFamilySecondary:"Josefin Sans", sans-serif;//補佐的に使うフォント
 /* ヘッダー ==========================*/
 /* メイン ============================*/
 /* フッター ==========================*/
+/* CSS サークルバナー ==========================*/
+.circle-banner {
+  position: fixed;
+  right: 0;
+  bottom: 10px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba($color:$backGroundAccent, $alpha: 0.8);
+  z-index: 10;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: $backGroundMain;
+  font-size: 22px;
+  transform: translateX(100%) rotate(90deg);
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.circle-banner.is-over {
+  right: 10px;
+  transform: translateX(0) rotate(0);
+}
+
+.circle-banner:hover {
+  transform: scale(1.2);
+}
 /* タブレット レスポンシブの設定 ========*/
 @media(max-width:900px){
 

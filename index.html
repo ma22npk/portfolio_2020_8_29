@@ -1,29 +1,160 @@
 <!DOCTYPE html>
 <!-- 日本語サイトであることの宣言 -->
 <html lang="ja">
+
 <head>
-<!-- 文字コードはutf-8を指定 -->
-<meta charset="UTF-8">
-    <!-- スマホやタブレットで表示をするビューポートの記述 -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- ディスクリプションはサイトの説明文。 -->
-    <meta name="description" content="フロントエンドデベロッパー松本タカヒロのポートフォリオサイトです。">
-<!-- Style CSS -->
-<link href="/CSS/style.css" rel="stylesheet">
-<title>Takahiro ポートフォリオ</title>
+  <!-- 文字コードはutf-8を指定 -->
+  <meta charset="UTF-8">
+  <!-- スマホやタブレットで表示をするビューポートの記述 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ディスクリプションはサイトの説明文。 -->
+  <meta name="description" content="松本昂大のポートフォリオサイトです">
+  <!-- Reset CSS -->
+  <link href="/CSS/reset.css" rel="stylesheet">
+  <!-- SLICK -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Font awesome CDN -->
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  <!-- Style CSS -->
+  <link href="/CSS/style.css" rel="stylesheet">
+  <title>Takahiro Portfolio</title>
 </head>
+
 <body>
-<!-- HTML -->
-<!-- header --><header>
-<ul class="header-list-items">
-<li class="header-list-item"><a href="#" class="header-list" id="header-list-ab"></a>About</li>
-<li class="header-list-item"><a href="#" class="header-list" id="header-list-po"></a>Portfolio</li>
-<li class="header-list-item"><a href="#" class="header-list" id="header-list-sk"></a>Skill</li>
-<li class="header-list-item"><a href="#" class="header-list" id="header-list-co"></a>Contact</li>
-
-</ul>
-</header><!-- /header -->
-
-
+  <!-- HTML -->
+  <!-- header -->
+  <header>
+    <h1 class="header-logo">TAKAHIRO</h1><a href="#top"></a>
+    <ul class="header-list-items">
+      <li class="header-list-item ruby-am">ABOUT ME</li><a href="#aboutMe"></a>
+      <li class="header-list-item ruby-pf">PORTFOLIO</li><a href="#portfolio"></a>
+      <li class="header-list-item ruby-fl">FLOW</li><a href="#flow"></a>
+      <li class="header-list-item ruby-sk">SKILLS</li><a href="#skills"></a>
+      <li class="header-list-item ruby-sk">CONTACT</li><a href="#contact"></a>
+    </ul>
+  </header><!-- /header -->
+  <!-- main -->
+  <main>
+    <section class="top" id="top">
+      <div class="top-ttl-wrapper">
+        <h1 class="top-ttl">TAKAHIRO PORTFOLIO</h1>
+        <h3 class="top-sub-ttl">I'M WEB DEVELOPER</h3>
+      </div>
+    </section>
+    <section class="aboutMe" id="aboutMe">
+      <div class="section-ttl-wrapper aboutMe-ttl-wrapper">
+        <h2 class="aboutMe-name section-ttl" id="aboutMe-name">TAKAHIRO MATSUMOTO</h2>
+      </div>
+      <div class="aboutMe-img-wrapper"><img src="#" alt="松本昂大" class="aboutMe-img"></div>
+      <div class="aboutMe-text-wrapper">
+        <p class="aboutMe-txt">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+      </div>
+    </section>
+    <section class="portfolio" id="portfolio">
+      <div class="inner">
+        <div class="section-ttl-wrapper">
+          <h3 class="section-ttl">PORTFOLIO</h3>
+        </div>
+        <div class="portfolio-slider-wrap">
+          <ul class="portfolio-slider inner">
+            <li><img class="portfolio-slider-img" src="/images/portfolio_dl1.png" alt="デイリーレポート"></li>
+            <li><img class="portfolio-slider-img" src="/images/portfolio_dl2.png" alt="デイリーレポート"></li>
+            <li><img class="portfolio-slider-img" src="/images/portfolio_dl3.png" alt="デイリーレポート"></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="skills" id="skills">
+      <div class="inner">
+        <div class="section-ttl-wrapper">
+          <h3 class="section-ttl">SKILLS</h3>
+        </div>
+        <ul class="skill-items" id="skill-items">
+          <li class="skill-item" id="skill-item">
+            <img src="/img/skill_html.png" alt="HTML&CSS" class="skill-item-img" id="skill-item-img">
+            <div class="skill-item-wrapper">
+              <h4 class="skill-ttl">HTML & CSS</h4>
+              <p class="skill-txt">テキストテキストテキストテキストテキストテキストテキスト</p>
+            </div>
+          </li>
+          <li class="skill-item" id="skill-item-sass">
+            <img src="/img/skill_sass.png" alt="SASS" class="skill-item-img" id="skill-item-img-html">
+            <div class="skill-item-wrapper">
+              <h4 class="skill-ttl">SASS</h4>
+              <p class="skill-txt">テキストテキストテキストテキストテキストテキストテキスト</p>
+            </div>
+          </li>
+          <li class="skill-item" id="skill-item-js">
+            <img src="/img/skill_js.png" alt="JavaScript" class="skill-item-img" id="skill-item-img-js">
+            <div class="skill-item-wrapper">
+              <h4 class="skill-ttl">JavaScript</h4>
+              <p class="skill-txt">テキストテキストテキストテキストテキストテキストテキスト</p>
+            </div>
+          </li>
+          <li class="skill-item" id="skill-item-jquery">
+            <img src="/img/skill_jq.png" alt="jQuery" class="skill-item-img" id="skill-item-img-jq">
+            <div class="skill-item-wrapper">
+              <h4 class="skill-ttl">JQuery</h4>
+              <p class="skill-txt">テキストテキストテキストテキストテキストテキストテキスト</p>
+            </div>
+          </li>
+          <li class="skill-item" id="skill-item-wordPress">
+            <img src="/img/skill_wp.png" alt="WordPress" class="skill-item-" id="skill-item-img-wp">
+            <div class="skill-item-wrapper">
+              <h4 class="skill-ttl">WordPress</h4>
+              <p class="skill-txt">テキストテキストテキストテキストテキストテキストテキスト</p>
+            </div>
+          </li>
+          <li class="skill-item" id="skill-item-bootstrap">
+            <img src="/img/skill_wp.png" alt="BootStrap" class="skill-item-img" id="skill-item-img-bs">
+            <div class="skill-item-wrapper">
+              <h4 class="skill-ttl">BootStrap</h4>
+              <p class="skill-txt">テキストテキストテキストテキストテキストテキストテキスト</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="flow" id="flow">
+      <div class="inner">
+        <h3 class="section-ttl">FLOW</h3>
+        <ul class="flow-items">
+          <li class="flow-item">
+            <div class="flow-img-wrapper"><img src="" alt="" class="flow-img">
+              <p class="flow-txt">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="contact" id="contact">
+      <div class="section-ttl-wrapper">
+        <h3 class="section-ttl">CONTACT</h3>
+      </div>
+      <div class="inner form-item-wrapper">
+        <form action="post" class="contact"></form>
+      </div>
+    </section>
+  <!-- HTMLコロリン -->
+  <a href="#top" class="circle-banner totop">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+  <!-- /HTMLコロリン -->
+    <footer class="footer">
+      <div class="footer-top">
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">Copyright-松本昂大, 2020 All Rights Reserved</p>
+      </div>
+    </footer><!-- /footer -->
+  </main><!-- /main -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="/js/slick.min.js"></script>
+  <script src="/js/script.js"></script>
 </body>
+
 </html>

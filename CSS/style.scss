@@ -1,4 +1,31 @@
 //SASS
+// 変数の設定 ===========================
+// 色 --------------------------------
+$backGroundBase:#fff;//70%
+$backGroundMain:#fee898;//25%
+$backGroundAccent:#8cbee8;//5%
+$fontColorPrimary:#fff;
+$fontColorSecondary:#8cbee8;
+//$fontBackColorPrimary:;
+//$fontBackColorSecondary:;
+// フォント ---------------------------
+$fontFamilyLogo:'Calligraffitti', cursive;//ロゴ用の特別フォント
+$fontFamilyPrimary:'Open Sans', sans-serif;//主に使うフォント
+$fontFamilySecondary:"Josefin Sans", sans-serif;//補佐的に使うフォント
+// mixinの設定 =========================
+/* パーツの設定 =======================*/
+/* 位置の調整 =========================*/
+/* ヘッダー ==========================*/
+/* メイン ============================*/
+/* フッター ==========================*/
+/* タブレット レスポンシブの設定 ========*/
+@media(max-width:900px){
+
+};
+/* スマートフォン レスポンシブの設定 =====*/
+@media(max-width:670px){
+
+};
 header {
 width: 100%;
 .header-list-items {

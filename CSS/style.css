@@ -1,10 +1,21 @@
+@charset "UTF-8";
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
+/* パーツの設定 =======================*/
+/* 位置の調整 =========================*/
+/* ヘッダー ==========================*/
 header {
   width: 100%;
+}
+
+header .header-logo {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 64px;
+  color: #fff;
 }
 
 header .header-list-items {
@@ -21,4 +32,43 @@ header .header-list-items {
 header .header-list-items .header-list-item {
   text-align: center;
 }
+
+/* メイン ============================*/
+/* フッター ==========================*/
+/* CSS サークルバナー ==========================*/
+.circle-banner {
+  position: fixed;
+  right: 0;
+  bottom: 10px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(140, 190, 232, 0.8);
+  z-index: 10;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: #fee898;
+  font-size: 22px;
+  -webkit-transform: translateX(100%) rotate(90deg);
+          transform: translateX(100%) rotate(90deg);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.circle-banner.is-over {
+  right: 10px;
+  -webkit-transform: translateX(0) rotate(0);
+          transform: translateX(0) rotate(0);
+}
+
+.circle-banner:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+/* タブレット レスポンシブの設定 ========*/
+/* スマートフォン レスポンシブの設定 =====*/
 /*# sourceMappingURL=style.css.map */

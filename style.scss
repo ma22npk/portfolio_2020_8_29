@@ -1,0 +1,536 @@
+* {
+  box-sizing: border-box;
+}
+
+// 変数の設定 ===========================
+// 色 --------------------------------
+$backGroundBase:#fff; //70%
+$backGroundMain:#fee898; //25%
+$backGroundAccent:#8cbee8; //5%
+$fontColorPrimary:#fff;
+$fontColorSecondary:#8cbee8;
+$fontColorThird:#301f1b;
+//$fontBackColorPrimary:;
+//$fontBackColorSecondary:;
+// フォント ---------------------------
+$fontFamilyLogo:'Calligraffitti',
+; //ロゴ用の特別フォント
+$fontFamilyPrimary:'Open Sans',
+sans-serif; //主に使うフォント
+$fontFamilySecondary:-apple-system,
+system-ui,
+system-ui,
+"Segoe UI",
+Roboto,
+"Helvetica Neue",
+Arial,
+sans-serif; //補佐的に使うフォント
+// boxShadowの設定 ===========================
+$boxShadowGoogleCard: 0 2px 5px rgba(0, 0, 0, 0.26);
+$boxShadowGoogleApp: 0 2px 10px rgba(0, 0, 0, .2);
+
+//ヘッダー
+header {
+
+  background: $backGroundMain;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10%;
+  height: 40px;
+  box-shadow: $boxShadowGoogleCard;
+
+  .header-logo {
+    font-size: 32px;
+    font-weight: 600;
+    color: $fontColorSecondary;
+    font-family: $fontFamilyLogo;
+    line-height: 40px;
+  }
+
+  .header-list-items {
+    display: flex;
+    justify-content: space-between;
+    width: 680px;
+    font-size: 16px;
+    line-height: 40px;
+    text-align: center;
+
+    //.header-list-item {}
+  }
+}
+
+/*============================
+#top
+============================*/
+#top.top {
+  background-image: url(/img/top-bg.png);
+  background-size: cover;
+  height: 800px;
+  display: grid;
+  place-items: center;
+
+  .top-ttl-wrapper {
+    box-shadow: $boxShadowGoogleCard;
+    text-align: center;
+    background-color: #8cbee8;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+
+    .top-ttl {
+      display: block;
+      font-family: "Calligraffitti";
+      font-size: 60px;
+      padding: 28px 0 10px;
+      font-weight: 600;
+      color: $fontColorPrimary;
+      letter-spacing: 4px;
+    }
+
+    .top-sub-ttl {
+      font-family: $fontFamilyPrimary;
+      width: 100%;
+      font-size: 24px;
+      font-weight: 600;
+      color: $fontColorSecondary;
+      padding: 10px;
+      display: block;
+      background: $backGroundBase;
+    }
+  }
+}
+
+/*============================
+#aboutMe
+============================*/
+.section-ttl-wrapper {
+  display: grid;
+  place-items: center;
+
+  .section-ttl {
+    margin-top: 40px;
+    font-size: 48px;
+    color: $fontColorPrimary;
+    font-family: $fontFamilyLogo;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1em;
+
+    &:before {
+      position: absolute;
+      width: 80%;
+      height: 4px;
+      background-color: #fff;
+      bottom: -10px;
+      left: 10%;
+      content: "";
+      transform: translateX(-50%);
+      transform: translateY(-50%);
+    }
+  }
+}
+
+section {
+  padding: 40px 0px;
+}
+
+section#aboutMe.aboutMe {
+  background: $backGroundMain;
+  padding-bottom: 80px;
+
+  .aboutMe-items {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    .aboutMe-item-personal {
+      width: 480px;
+      margin: 0 40px 0 0;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      div.aboutMe-ttl-wrapper {
+        box-shadow: $boxShadowGoogleCard;
+        background: $backGroundAccent;
+        padding: 20px 0 20px 0%;
+        width: 100%;
+
+        h2#aboutMe-name.aboutMe-name {
+          color: $fontColorPrimary;
+          font-size: 24px;
+          text-align: center;
+
+        }
+      }
+
+      div.aboutMe-img-wrapper {
+        box-shadow: $boxShadowGoogleCard;
+        width: 400px;
+        margin-top: 40px;
+        height: 400px;
+        margin-left: auto;
+
+        img.aboutMe-img {
+          background-color: #ffff;
+          widows: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    div.aboutMe-text-wrapper {
+      box-shadow: $boxShadowGoogleCard;
+      background-color: $backGroundBase;
+      width: calc(80% - 40px - 360px);
+
+      p.aboutMe-txt {
+        color: $fontColorSecondary;
+      }
+    }
+  }
+}
+
+/*============================
+#portfolio
+============================*/
+div.inner {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.portfolio {
+  .section-ttl {
+    color: $fontColorSecondary;
+
+    &::before {
+      background-color: $backGroundAccent;
+    }
+  }
+}
+
+//スライダーの設定
+
+.slide-btn {
+  position: absolute;
+  content: "";
+
+  background-color: #FFF;
+  border-radius: 100%;
+  padding: 5px;
+  top: 40%;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  display: block;
+  z-index: 30;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.1s;
+  box-shadow: $boxShadowGoogleApp;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-family: 'slick';
+  font-size: 24px;
+  line-height: 1;
+  opacity: .75;
+  color: $backGroundAccent;
+  -webkit-font-smoothing: antialiased;
+}
+
+.prev-btn {
+  left: 0;
+  background-image: url(/img/arrow_prev.png);
+
+}
+
+.next-btn {
+  right: 0;
+  background-image: url(/img/arrow_next.png);
+}
+
+/*============================
+#skills
+============================*/
+section#skills.skills {
+  background-color: $backGroundMain;
+
+  div.inner {
+
+    /*============================
+#skill-items
+============================*/
+    .skill-items.skill-items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      /*============================
+#skill-item
+============================*/
+      .skill-item.skill-item {
+        background-color: $backGroundBase;
+        width: 240px;
+        height: 320px;
+        padding: 10px 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column;
+        box-shadow: $boxShadowGoogleCard;
+        margin: 20px 80px;
+
+        /*============================
+#skill-item-img
+============================*/
+        .skill-item-img.skill-item-img {
+          width: 200px;
+          height: 160px;
+        }
+
+        div.skill-item-wrapper {
+          margin-top: 20px;
+
+          h4.skill-ttl {
+            font: 600 24px $fontFamilyPrimary;
+            color: $fontColorSecondary;
+            text-align: center;
+          }
+
+          p.skill-txt {
+            font: 600 12px $fontFamilyPrimary;
+            color: $fontColorSecondary;
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/*============================
+#flow
+============================*/
+section#flow.flow {
+  h3.section-ttl {
+    color: $fontColorSecondary;
+
+    &::before {
+      background-color: $fontColorSecondary;
+    }
+  }
+
+  ul.flow-process-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    li.flow-process-item {
+      box-shadow: $boxShadowGoogleCard;
+      width: 320px;
+      height: auto;
+      border: 2px solid #000;
+      padding: 40px 20px;
+      margin: 20px 10px;
+
+      p.step {
+        margin: 0 auto 20px;
+        font: 16px bold;
+        color: #fff;
+        background-color: $fontColorSecondary;
+        text-align: center;
+        padding: 4px 8px;
+        width: 180px;
+        height: auto;
+        border-radius: 4px;
+      }
+
+      p.process-text {
+        font: 16px #301f1b 400;
+        letter-spacing: 1px;
+        line-height: 24px;
+      }
+    }
+  }
+}
+
+/*============================
+#contact
+============================*/
+input,
+textarea {
+  border: solid 1px $fontColorSecondary;
+  font-size: 18px;
+  padding: 4px;
+
+}
+
+section#contact.contact {
+  background-image: url(/img/contact-bg.png);
+  background-size: cover;
+  height: 1000px;
+
+  div.section-contact-ttl-wrapper {
+    margin: 40px 0 40px 0;
+
+    h3.section-contact-ttl {
+      box-shadow: $boxShadowGoogleCard;
+      width: 680px;
+      font-size: 40px;
+      background-color: $backGroundAccent;
+      color: $fontColorPrimary;
+      padding: 20px 20px 20px;
+      text-align: center;
+    }
+  }
+
+  div.inner.form-item-wrapper {
+    box-shadow: $boxShadowGoogleCard;
+    background: rgba(#fff, 0.4);
+    width: 580px;
+    padding: 40px 40px;
+    margin-left: 100px;
+
+    form.contact {
+      .input-item {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        flex-direction: column;
+        margin-top: 16px;
+
+        .contact-label {
+          display: block;
+          cursor: pointer;
+          color: $fontColorSecondary;
+
+        }
+
+        /*============================
+#input-email
+============================*/
+        .input-name,
+        input#input-email.input-email {
+          margin-top: 8px;
+          width: 100%;
+        }
+
+        /*============================
+#mail-textarea
+============================*/
+        textarea#mail-textarea.mail-textarea {
+          width: 100%;
+          margin-top: 8px;
+        }
+      }
+    }
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: .8em 4em;
+  margin: 0 0 1em;
+  background-image: none;
+  background-color: $fontColorSecondary;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  box-shadow: $boxShadowGoogleApp;
+  position: relative;
+}
+
+.btn:hover .btn:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.btn::-moz-foucus-inner {
+  padding: 0;
+  border: none;
+}
+
+/* フッター ==========================*/
+footer.footer {
+display: grid;
+place-items: center;
+padding: 20px 0px;
+background-color: $backGroundMain;
+	div.footer-top {
+a.sns-icon {width: 40px;
+display: grid;
+place-items: center;
+border-radius: 100px;
+background-color: $fontColorSecondary;
+height: 40px;
+	i.fab.fa-twitter {
+color: #FFF;
+font-size: 24px;
+line-height: 40px;
+	}
+}
+
+	}
+	div.footer-bottom {
+		p.footer-copy {
+font-style: 8px;
+color: $fontColorSecondary;
+text-align: center;
+		}
+	}
+}
+/* CSS サークルバナー ==========================*/
+.btn-wrapper {
+  margin-top: 40px;
+  display: grid;
+  place-items: center;
+}
+
+.circle-banner {
+  position: fixed;
+  right: 0;
+  bottom: 10px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: $backGroundAccent;
+  z-index: 10;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: $backGroundMain;
+  font-size: 22px;
+  transform: translateX(100%) rotate(90deg);
+  transition: all 0.5s;
+  cursor: pointer;
+  box-shadow: $boxShadowGoogleApp;
+}
+
+.circle-banner.is-over {
+  right: 10px;
+  transform: translateX(0) rotate(0);
+}
+
+.circle-banner:hover {
+  transform: scale(1.2);
+}

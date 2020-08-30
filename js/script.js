@@ -1,36 +1,11 @@
-// ローディングアニメーション
-$(window).on("load", function () {
-  setTimeout(function () {
-    $('.loader_screen').fadeOut();
-  }, 400)
-});
-// ハンバーガーメニュー ---------------------------
-$(function () {
-  $('.btn-trigger').on('click', function () {
-    $(this).toggleClass('active');
-    $('.header-nav').toggleClass('active');
-    return false;
-  });
-});
-//現在の日時を表示してHTMLに表示する======================
-//Dateオブジェクトで本日の日付を取得する
-let today = new Date();
-document.getElementById("view-time").innerHTML = getNow();
-document.getElementById("view-time-top").innerHTML = getNow();
-//日時の変数設定
-function getNow() {
-  let now = new Date();
-  let year = now.getFullYear();
-  let mon = now.getMonth() + 1; //1を足すこと
-  let day = now.getDate();
-  let hour = now.getHours();
-  let min = now.getMinutes();
-  let sec = now.getSeconds();
-  let dayOfWeek = now.getDay(); //曜日（数値）
-  let dayOfWeekStr = ["日", "月", "火", "水", "木", "金", "土", ][dayOfWeek]; //曜日（日本語表記）
-  let allDate = year + "年" + mon + "月" + day + "日" + dayOfWeekStr + "曜日"/*+ hour + "時" + min +"分" + sec + "秒"*/ ;
-  return allDate;
-};
+// // ハンバーガーメニュー ---------------------------
+// $(function () {
+//   $('.btn-trigger').on('click', function () {
+//     $(this).toggleClass('active');
+//     $('.header-nav').toggleClass('active');
+//     return false;
+//   });
+// });
 
 // ポートフォリオのスリック実装 ===========================
 //htmlが完全に読み込まれてからでないと、jQueryやJavaScriptは正しく機能しない事がおおい
@@ -76,19 +51,6 @@ $(window).on("scroll", function () {
     }
   });
 });
-//【jQuery】スクロール時にヘッダーの色を変える
-$(function () {
-  var header = $('#header')
-  header_offset = header.offset();
-  header_height = header.height();
-  $(window).scroll(function () {
-    if ($(window).scrollTop() > header_offset.top + header_height) {
-      header.addClass('scroll');
-    } else {
-      header.removeClass('scroll');
-    }
-  });
-});
 // スムーススクロール
 jQuery('a[href^="#"]').click(function () {
   let header = jQuery(".header").innerHeight();
@@ -118,11 +80,8 @@ jQuery(window).on("scroll", function () {
     jQuery('.totop').removeClass('is-show');
   }
 });
-
 jQuery('.header-nav ul li a').click(function() {
   jQuery('.header-nav ul li a').removeClass( 'is-active' );
   jQuery(this).addClass( 'is-active' );
   return false;
 });
-
-alert('');

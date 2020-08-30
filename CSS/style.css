@@ -4,22 +4,30 @@
           box-sizing: border-box;
 }
 
-/* パーツの設定 =======================*/
-/* 位置の調整 =========================*/
-/* ヘッダー ==========================*/
 header {
+  background: #fee898;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 10%;
+  height: 40px;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
 }
 
 header .header-logo {
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 64px;
-  color: #fff;
+  font-size: 32px;
+  font-weight: 600;
+  color: #8cbee8;
+  font-family: "Calligraffitti";
+  line-height: 40px;
 }
 
 header .header-list-items {
-  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -27,15 +35,509 @@ header .header-list-items {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 680px;
-}
-
-header .header-list-items .header-list-item {
+  font-size: 16px;
+  line-height: 40px;
   text-align: center;
 }
 
-/* メイン ============================*/
+/*============================
+#top
+============================*/
+#top.top {
+  background-image: url(/img/top-bg.png);
+  background-size: cover;
+  height: 800px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+#top.top .top-ttl-wrapper {
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  text-align: center;
+  background-color: #8cbee8;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#top.top .top-ttl-wrapper .top-ttl {
+  display: block;
+  font-family: "Calligraffitti";
+  font-size: 60px;
+  padding: 28px 0 10px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 4px;
+}
+
+#top.top .top-ttl-wrapper .top-sub-ttl {
+  font-family: "Open Sans", sans-serif;
+  width: 100%;
+  font-size: 24px;
+  font-weight: 600;
+  color: #8cbee8;
+  padding: 10px;
+  display: block;
+  background: #fff;
+}
+
+/*============================
+#aboutMe
+============================*/
+.section-ttl-wrapper {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.section-ttl-wrapper .section-ttl {
+  margin-top: 40px;
+  font-size: 48px;
+  color: #fff;
+  font-family: "Calligraffitti";
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1em;
+}
+
+.section-ttl-wrapper .section-ttl:before {
+  position: absolute;
+  width: 80%;
+  height: 4px;
+  background-color: #fff;
+  bottom: -10px;
+  left: 10%;
+  content: "";
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+section {
+  padding: 40px 0px;
+}
+
+section#aboutMe.aboutMe {
+  background: #fee898;
+  padding-bottom: 80px;
+}
+
+section#aboutMe.aboutMe .aboutMe-items {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+section#aboutMe.aboutMe .aboutMe-items .aboutMe-item-personal {
+  width: 480px;
+  margin: 0 40px 0 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+section#aboutMe.aboutMe .aboutMe-items .aboutMe-item-personal div.aboutMe-ttl-wrapper {
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  background: #8cbee8;
+  padding: 20px 0 20px 0%;
+  width: 100%;
+}
+
+section#aboutMe.aboutMe .aboutMe-items .aboutMe-item-personal div.aboutMe-ttl-wrapper h2#aboutMe-name.aboutMe-name {
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+}
+
+section#aboutMe.aboutMe .aboutMe-items .aboutMe-item-personal div.aboutMe-img-wrapper {
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  width: 400px;
+  margin-top: 40px;
+  height: 400px;
+  margin-left: auto;
+}
+
+section#aboutMe.aboutMe .aboutMe-items .aboutMe-item-personal div.aboutMe-img-wrapper img.aboutMe-img {
+  background-color: #ffff;
+  widows: 100%;
+  height: 100%;
+}
+
+section#aboutMe.aboutMe .aboutMe-items div.aboutMe-text-wrapper {
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  background-color: #fff;
+  width: calc(80% - 40px - 360px);
+}
+
+section#aboutMe.aboutMe .aboutMe-items div.aboutMe-text-wrapper p.aboutMe-txt {
+  color: #8cbee8;
+}
+
+/*============================
+#portfolio
+============================*/
+div.inner {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.portfolio .section-ttl {
+  color: #8cbee8;
+}
+
+.portfolio .section-ttl::before {
+  background-color: #8cbee8;
+}
+
+.slide-btn {
+  position: absolute;
+  content: "";
+  background-color: #FFF;
+  border-radius: 100%;
+  padding: 5px;
+  top: 40%;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  display: block;
+  z-index: 30;
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.slide-btn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.slide-btn:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-family: 'slick';
+  font-size: 24px;
+  line-height: 1;
+  opacity: .75;
+  color: #8cbee8;
+  -webkit-font-smoothing: antialiased;
+}
+
+.prev-btn {
+  left: 0;
+  background-image: url(/img/arrow_prev.png);
+}
+
+.next-btn {
+  right: 0;
+  background-image: url(/img/arrow_next.png);
+}
+
+/*============================
+#skills
+============================*/
+section#skills.skills {
+  background-color: #fee898;
+}
+
+section#skills.skills div.inner {
+  /*============================
+#skill-items
+============================*/
+}
+
+section#skills.skills div.inner .skill-items.skill-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /*============================
+#skill-item
+============================*/
+}
+
+section#skills.skills div.inner .skill-items.skill-items .skill-item.skill-item {
+  background-color: #fff;
+  width: 240px;
+  height: 320px;
+  padding: 10px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  margin: 20px 80px;
+  /*============================
+#skill-item-img
+============================*/
+}
+
+section#skills.skills div.inner .skill-items.skill-items .skill-item.skill-item .skill-item-img.skill-item-img {
+  width: 200px;
+  height: 160px;
+}
+
+section#skills.skills div.inner .skill-items.skill-items .skill-item.skill-item div.skill-item-wrapper {
+  margin-top: 20px;
+}
+
+section#skills.skills div.inner .skill-items.skill-items .skill-item.skill-item div.skill-item-wrapper h4.skill-ttl {
+  font: 600 24px "Open Sans", sans-serif;
+  color: #8cbee8;
+  text-align: center;
+}
+
+section#skills.skills div.inner .skill-items.skill-items .skill-item.skill-item div.skill-item-wrapper p.skill-txt {
+  font: 600 12px "Open Sans", sans-serif;
+  color: #8cbee8;
+  text-align: left;
+}
+
+/*============================
+#flow
+============================*/
+section#flow.flow h3.section-ttl {
+  color: #8cbee8;
+}
+
+section#flow.flow h3.section-ttl::before {
+  background-color: #8cbee8;
+}
+
+section#flow.flow ul.flow-process-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section#flow.flow ul.flow-process-items li.flow-process-item {
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  width: 320px;
+  height: auto;
+  border: 2px solid #000;
+  padding: 40px 20px;
+  margin: 20px 10px;
+}
+
+section#flow.flow ul.flow-process-items li.flow-process-item p.step {
+  margin: 0 auto 20px;
+  font: 16px bold;
+  color: #fff;
+  background-color: #8cbee8;
+  text-align: center;
+  padding: 4px 8px;
+  width: 180px;
+  height: auto;
+  border-radius: 4px;
+}
+
+section#flow.flow ul.flow-process-items li.flow-process-item p.process-text {
+  font: 16px #301f1b 400;
+  letter-spacing: 1px;
+  line-height: 24px;
+}
+
+/*============================
+#contact
+============================*/
+input,
+textarea {
+  border: solid 1px #8cbee8;
+  font-size: 18px;
+  padding: 4px;
+}
+
+section#contact.contact {
+  background-image: url(/img/contact-bg.png);
+  background-size: cover;
+  height: 1000px;
+}
+
+section#contact.contact div.section-contact-ttl-wrapper {
+  margin: 40px 0 40px 0;
+}
+
+section#contact.contact div.section-contact-ttl-wrapper h3.section-contact-ttl {
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  width: 680px;
+  font-size: 40px;
+  background-color: #8cbee8;
+  color: #fff;
+  padding: 20px 20px 20px;
+  text-align: center;
+}
+
+section#contact.contact div.inner.form-item-wrapper {
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
+  background: rgba(255, 255, 255, 0.4);
+  width: 580px;
+  padding: 40px 40px;
+  margin-left: 100px;
+}
+
+section#contact.contact div.inner.form-item-wrapper form.contact .input-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 16px;
+  /*============================
+#input-email
+============================*/
+  /*============================
+#mail-textarea
+============================*/
+}
+
+section#contact.contact div.inner.form-item-wrapper form.contact .input-item .contact-label {
+  display: block;
+  cursor: pointer;
+  color: #8cbee8;
+}
+
+section#contact.contact div.inner.form-item-wrapper form.contact .input-item .input-name,
+section#contact.contact div.inner.form-item-wrapper form.contact .input-item input#input-email.input-email {
+  margin-top: 8px;
+  width: 100%;
+}
+
+section#contact.contact div.inner.form-item-wrapper form.contact .input-item textarea#mail-textarea.mail-textarea {
+  width: 100%;
+  margin-top: 8px;
+}
+
+.btn {
+  display: inline-block;
+  padding: .8em 4em;
+  margin: 0 0 1em;
+  background-image: none;
+  background-color: #8cbee8;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+.btn:hover .btn:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.btn::-moz-foucus-inner {
+  padding: 0;
+  border: none;
+}
+
 /* フッター ==========================*/
+footer.footer {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  padding: 20px 0px;
+  background-color: #fee898;
+}
+
+footer.footer div.footer-top a.sns-icon {
+  width: 40px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  border-radius: 100px;
+  background-color: #8cbee8;
+  height: 40px;
+}
+
+footer.footer div.footer-top a.sns-icon i.fab.fa-twitter {
+  color: #FFF;
+  font-size: 24px;
+  line-height: 40px;
+}
+
+footer.footer div.footer-bottom p.footer-copy {
+  font-style: 8px;
+  color: #8cbee8;
+  text-align: center;
+}
+
 /* CSS サークルバナー ==========================*/
+.btn-wrapper {
+  margin-top: 40px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
 .circle-banner {
   position: fixed;
   right: 0;
@@ -43,7 +545,7 @@ header .header-list-items .header-list-item {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: rgba(140, 190, 232, 0.8);
+  background: #8cbee8;
   z-index: 10;
   display: -ms-grid;
   display: grid;
@@ -56,6 +558,8 @@ header .header-list-items .header-list-item {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   cursor: pointer;
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .circle-banner.is-over {
@@ -68,7 +572,4 @@ header .header-list-items .header-list-item {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
-
-/* タブレット レスポンシブの設定 ========*/
-/* スマートフォン レスポンシブの設定 =====*/
 /*# sourceMappingURL=style.css.map */

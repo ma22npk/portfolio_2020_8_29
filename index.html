@@ -20,7 +20,7 @@
   <!-- Font awesome CDN -->
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
   <!-- Style CSS -->
-  <link href="/CSS/style.css.map" rel="stylesheet">
+  <link href="/CSS/style.css" rel="stylesheet">
   <title>Takahiro Portfolio</title>
 </head>
 
@@ -46,12 +46,19 @@
       </div>
     </section>
     <section class="aboutMe" id="aboutMe">
-      <div class="section-ttl-wrapper aboutMe-ttl-wrapper">
-        <h2 class="aboutMe-name section-ttl" id="aboutMe-name">TAKAHIRO MATSUMOTO</h2>
+      <div class="section-ttl-wrapper">
+        <h3 class="section-ttl">ABOUT ME</h3>
       </div>
-      <div class="aboutMe-img-wrapper"><img src="#" alt="松本昂大" class="aboutMe-img"></div>
-      <div class="aboutMe-text-wrapper">
-        <p class="aboutMe-txt">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+      <div class="aboutMe-items">
+        <div class="aboutMe-item-personal">
+          <div class="aboutMe-ttl-wrapper">
+            <h2 class="aboutMe-name" id="aboutMe-name">PROFILE</h2>
+          </div>
+          <div class="aboutMe-img-wrapper"><img src="/img/no-img_250_250.png" alt="松本昂大" class="aboutMe-img"></div>
+        </div>
+        <div class="aboutMe-text-wrapper">
+          <p class="aboutMe-txt">モダンで機能的なWEBサイトを制作します。</p>
+        </div>
       </div>
     </section>
     <section class="portfolio" id="portfolio">
@@ -61,9 +68,11 @@
         </div>
         <div class="portfolio-slider-wrap">
           <ul class="portfolio-slider inner">
-            <li><img class="portfolio-slider-img" src="/images/portfolio_dl1.png" alt="デイリーレポート"></li>
-            <li><img class="portfolio-slider-img" src="/images/portfolio_dl2.png" alt="デイリーレポート"></li>
-            <li><img class="portfolio-slider-img" src="/images/portfolio_dl3.png" alt="デイリーレポート"></li>
+            <li><img class="portfolio-slider-img" src="/img/no_image_640_540.png" alt="デイリーレポート"></li>
+            <li><img class="portfolio-slider-img" src="/img/no_image_640_540.png" alt="デイリーレポート"></li>
+            <li><img class="portfolio-slider-img" src="/img/no_image_640_540.png" alt="デイリーレポート"></li>
+            <li><img class="portfolio-slider-img" src="/img/no_image_640_540.png" alt="デイリーレポート"></li>
+            <li><img class="portfolio-slider-img" src="/img/no_image_640_540.png" alt="デイリーレポート"></li>
           </ul>
         </div>
       </div>
@@ -103,14 +112,14 @@
             </div>
           </li>
           <li class="skill-item" id="skill-item-wordPress">
-            <img src="/img/skill_wp.png" alt="WordPress" class="skill-item-" id="skill-item-img-wp">
+            <img src="/img/skill_wp.png" alt="WordPress" class="skill-item-img" id="skill-item-img-wp">
             <div class="skill-item-wrapper">
               <h4 class="skill-ttl">WordPress</h4>
               <p class="skill-txt">テキストテキストテキストテキストテキストテキストテキスト</p>
             </div>
           </li>
           <li class="skill-item" id="skill-item-bootstrap">
-            <img src="/img/skill_wp.png" alt="BootStrap" class="skill-item-img" id="skill-item-img-bs">
+            <img src="/img/skill_bs.png" alt="BootStrap" class="skill-item-img" id="skill-item-img-bs">
             <div class="skill-item-wrapper">
               <h4 class="skill-ttl">BootStrap</h4>
               <p class="skill-txt">テキストテキストテキストテキストテキストテキストテキスト</p>
@@ -121,22 +130,92 @@
     </section>
     <section class="flow" id="flow">
       <div class="inner">
-        <h3 class="section-ttl">FLOW</h3>
-        <ul class="flow-items">
-          <li class="flow-item">
-            <div class="flow-img-wrapper"><img src="#" alt="" class="flow-img">
-              <p class="flow-txt">テキストテキストテキストテキストテキストテキストテキストテキスト</p>
-            </div>
+        <div class="section-ttl-wrapper">
+          <h3 class="section-ttl">FLOW</h3>
+        </div>
+        <ul class="flow-process-items">
+          <li class="flow-process-item">
+            <p class="step">1.お問い合わせ</p>
+            <p class="process-text">
+              メールフォームまたはSNSよりご連絡ください。
+              ご質問・ご相談・お見積り等 なんでもお気軽にお問い合わせください。
+            </p>
+          </li>
+          <li class="flow-process-item">
+            <p class="step">2.ヒアリング</p>
+            <p class="process-text">
+              制作物の用途やイメージと納期をお聞かせ頂きながら具体的な制作内容を決めていきます。
+              メールやオンライン通話などでお伺い致します。
+            </p>
+          </li>
+          <li class="flow-process-item">
+            <p class="step">3.お見積もり・ご契約</p>
+            <p class="process-text">
+              お打合せ後に正式なお見積書をお出しします。
+              お間違えないかご確認お願い致します。
+              <br><br>
+              内容にご納得いただけましたらご契約となります。
+              先のお支払いがある場合は、ご入金が確認でき次第制作に進ませて頂きます。
+            </p>
+          </li>
+          <!-- <li class="flow-process-item">
+            <p class="step">4.ご契約</p>
+            <p class="process-text">
+              内容にご納得いただけましたらご契約となります。
+先のお支払いがある場合は、ご入金が確認でき次第制作に進ませて頂きます。
+            </p>
+          </li> -->
+          <li class="flow-process-item">
+            <p class="step">5.お支払い方法</p>
+            <p class="process-text">
+              【銀行振込】【paypay】【クレジット払い(現在準備中)】に対応しております。
+              5万円を超えるご依頼の場合は、先にお見積もり金額の50%をお支払いいただきます。
+              残金は納品時にお支払いいただきます。
+              前金入金後にキャンセルにされた場合に関しましては、入金いただいた分の返金はお受けできません。
+              また前金のないご依頼でもお客様都合でのキャンセルの場合は、キャンセル料が発生致しますので予めご了承下さい。
+            </p>
+          </li>
+          <li class="flow-process-item">
+            <p class="step">6.制作開始</p>
+            <p class="process-text">
+              ご契約後、素材や文字原稿などがある場合は全て揃った状態で制作スタートとなります。
+              まずは第一案(ラフ案)を作成しご確認いただき、問題ないようであればそのまま作成を進めていきます。
+              修正がある場合はその都度お早めにお願い致します。
+              デザインの進み具合によっては修正をお断りする場合や、追加料金が発生する場合がありますのでご注意ください。
+            </p>
+          </li>
+          <li class="flow-process-item">
+            <p class="step">7.完成・納品</p>
+            <p class="process-text">
+              データ納品の場合は、完成イメージご確認→最終データ仕上げ→ご請求・お支払い→納品 となります。
+              納品後にお客様自身で入稿・印刷等される場合のトラブルには一切の責任を負いません。
+              ※印刷後現物納品の場合は、完成イメージご確認→最終確認→入稿→ご請求・お支払い→納品 となります。
+            </p>
           </li>
         </ul>
       </div>
     </section>
     <section class="contact" id="contact">
-      <div class="section-ttl-wrapper">
-        <h3 class="section-ttl">CONTACT</h3>
+      <div class="section-contact-ttl-wrapper">
+        <h3 class="section-contact-ttl">CONTACT US</h3>
       </div>
       <div class="inner form-item-wrapper">
-        <form action="post" class="contact"></form>
+        <form
+          action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSe18u-zueMCpKeQcsZQTV_bUKjLkIhAvBcVhOE9d0N1Roke2w/formResponse"
+          class="contact">
+          <div class="input-item">
+            <label for="email" class="contact-label">メールアドレス</label><input type="email" name="YPqjbf" id="input-email"
+              class="input-email" required placeholder="example@email.com"></div>
+          <div class="input-item">
+            <label for="name" class="contact-label">お名前</label><input type="text" name="YPqjbf" id="input-name"
+              class="input-name" required placeholder="鈴木 一郎"></div>
+          <div class="input-item">
+            <label class="contact-label" for="mail-textarea">お問い合わせ内容</label>
+            <textarea name="YPqjbf" required id="mail-textarea" cols="30" rows="10" class="mail-textarea"></textarea>
+          </div>
+          <div class="btn-wrapper"><button class="btn-submit btn" type="submit" value="送信">送信</button>
+          </div>
+        </form>
       </div>
     </section>
     <!-- HTMLコロリン -->
@@ -146,6 +225,7 @@
     <!-- /HTMLコロリン -->
     <footer class="footer">
       <div class="footer-top">
+        <a class="sns-icon"><i class="fab fa-twitter"></i></a>
       </div>
       <div class="footer-bottom">
         <p class="footer-copy">Copyright-松本昂大, 2020 All Rights Reserved</p>

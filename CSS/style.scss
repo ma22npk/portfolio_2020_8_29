@@ -29,6 +29,26 @@ sans-serif; //補佐的に使うフォント
 $boxShadowGoogleCard: 0 2px 5px rgba(0, 0, 0, 0.26);
 $boxShadowGoogleApp: 0 2px 10px rgba(0, 0, 0, .2);
 
+// 各部の設定 ===========================
+a {
+
+  text-decoration: none;
+}
+// アニメーション ===========================
+// SASS フェードイン ===========================
+[data-fadeIn] {
+opacity: 0;
+transition: all 0.4s;
+transform: translateY(40px);
+}
+
+[data-fadeIn].is-over {
+opacity: 1;
+transform: translateY(0);
+}
+
+// 各部の設定 ===========================
+
 //ヘッダー
 header {
 
@@ -36,15 +56,16 @@ header {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 0 10%;
   height: 40px;
-  box-shadow: $boxShadowGoogleCard;
+
 
   .header-logo {
     font-size: 32px;
     font-weight: 600;
     color: $fontColorSecondary;
-    font-family: $fontFamilyLogo;
+    font-family: $fontFamilyPrimary;
     line-height: 40px;
   }
 
@@ -56,7 +77,31 @@ header {
     line-height: 40px;
     text-align: center;
 
-    //.header-list-item {}
+    .header-list-item {
+      a {
+        color: $fontColorSecondary;
+        font-weight: bold;
+        background: $backGroundMain;
+        padding: 0px 12px;
+        display: block;
+        height: 30px;
+        width: 120px;
+        text-align: center;
+        margin-right: 20px;
+        line-height: 30px;
+        box-shadow: $boxShadowGoogleApp;
+        transition: all 0.2s;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+
+        &:active {
+          box-shadow: $boxShadowGoogleCard;
+
+        }
+      }
+    }
   }
 }
 
@@ -169,29 +214,57 @@ section#aboutMe.aboutMe {
         }
       }
 
-      div.aboutMe-img-wrapper {
+      div.aboutMe-profile-wrapper {
         box-shadow: $boxShadowGoogleCard;
         width: 400px;
         margin-top: 40px;
-        height: 400px;
+        height: auto;
         margin-left: auto;
+        background-color: #ffff;
+        padding: 40px 20px;
+        font: 16px #333333 400;
+        letter-spacing: 1px;
+        line-height: 20px;
 
-        img.aboutMe-img {
-          background-color: #ffff;
-          widows: 100%;
-          height: 100%;
-        }
+
       }
     }
 
     div.aboutMe-text-wrapper {
+      padding: 40px 20px;
       box-shadow: $boxShadowGoogleCard;
       background-color: $backGroundBase;
       width: calc(80% - 40px - 360px);
+      height: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
 
-      p.aboutMe-txt {
-        color: $fontColorSecondary;
+      .aboutMe-img-wrapper {
+        width: 180px;
+        height: 180px;
+        margin: 40px 20px;
+
+        .aboutMe-img {
+          box-shadow: $boxShadowGoogleCard;
+          border-radius: 999px;
+          width: 100%;
+          height: 100%;
+        }
+
       }
+
+      .aboutMe-description {
+        width: 320px;
+
+        p.aboutMe-txt {
+          font: 16px #333333 400;
+          letter-spacing: 1px;
+          line-height: 20px;
+        }
+      }
+
     }
   }
 }
@@ -264,6 +337,13 @@ div.inner {
   right: 0;
   background-image: url(/img/arrow_next.png);
 }
+
+.portfolio-slider-img {
+  width: 320px;
+  height: 280px;
+  margin: 0 auto;
+}
+
 
 /*============================
 #skills
@@ -472,33 +552,78 @@ section#contact.contact {
 
 /* フッター ==========================*/
 footer.footer {
-display: grid;
-place-items: center;
-padding: 20px 0px;
-background-color: $backGroundMain;
-	div.footer-top {
-a.sns-icon {width: 40px;
-display: grid;
-place-items: center;
-border-radius: 100px;
-background-color: $fontColorSecondary;
-height: 40px;
-	i.fab.fa-twitter {
-color: #FFF;
-font-size: 24px;
-line-height: 40px;
-	}
+  width: 100%;
+  padding: 20px 0px;
+  background-color: $backGroundMain;
+  height: auto;
+
+  div.footer-top {
+    .footer-list-items {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .footer-list-item {
+
+        margin-right: 20px;
+
+
+
+
+
+        a {
+          display: grid;
+          place-items: center;
+          font-size: 12px;
+          color: $fontColorSecondary;
+          font-weight: bold;
+          width: 90px;
+          height: 90px;
+          border-radius: 100px;
+          box-shadow: $boxShadowGoogleApp;
+          transition: all 0.2s;
+
+          &:hover {
+            transform: scale(1.05);
+          }
+
+          &:active {
+            box-shadow: $boxShadowGoogleCard;
+
+          }
+        }
+      }
+    }
+
+  }
+
+  div.footer-bottom {
+    padding: 20px;
+
+    p.footer-copy {
+      font-style: 8px;
+      color: $fontColorSecondary;
+      text-align: center;
+    }
+  }
 }
 
-	}
-	div.footer-bottom {
-		p.footer-copy {
-font-style: 8px;
-color: $fontColorSecondary;
-text-align: center;
-		}
-	}
+a.sns-icon {
+  width: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 100px;
+  background-color: $fontColorSecondary;
+  height: 40px;
+
+  i.fab.fa-twitter {
+    color: #FFF;
+    font-size: 24px;
+    line-height: 40px;
+  }
 }
+
 /* CSS サークルバナー ==========================*/
 .btn-wrapper {
   margin-top: 40px;
@@ -518,7 +643,7 @@ text-align: center;
   display: grid;
   place-items: center;
   text-align: center;
-  color: $backGroundMain;
+  color: #fff;
   font-size: 22px;
   transform: translateX(100%) rotate(90deg);
   transition: all 0.5s;
@@ -533,4 +658,45 @@ text-align: center;
 
 .circle-banner:hover {
   transform: scale(1.2);
+}
+
+/*============================
+#thxMessage
+============================*/
+div#thxMessage {
+background: rgba(#fff, 0.5);
+position: fixed;
+background-size: cover;
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+display: none;
+place-items: center;
+
+.thxMessage-box{
+padding: 20px 10px;
+display: flex;
+justify-content: center;
+flex-direction: column;
+background-color: $backGroundBase;
+width: 360px;
+height: 320px;
+box-shadow: $boxShadowGoogleCard;
+color: #333333;
+div.afterformtit {
+text-align: center;
+font-size: 24px;
+margin-bottom: 20px;
+}
+
+  div.formtxt {
+text-align: center;
+    span {
+font: 16px;
+      
+    }
+  }
+}
+  
 }

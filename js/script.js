@@ -15,17 +15,20 @@ $(function () {
     autoplay: true, //自動再生
     arrows: true,
     dots: true,
-    speed: 200,
+    rows: 1, //行数
+    speed: 400,
     easing: 'swing',
     centerMode: true,
     centerPadding: '25%',
     arrows: true,
+    fade: false, //スライド切替えをフェードにする
+    slidesToShow: 2,
     prevArrow: '<div class="slide-btn prev-btn"></div>',
     nextArrow: '<div class="slide-btn next-btn"></div>',
     responsive: [{
       breakpoint: 1000,
       settings: {
-        centerPadding: '2%',
+        centerPadding: '1%',
         slidesToShow: 1,
         slidesToScroll: 1,
       }
@@ -80,8 +83,35 @@ jQuery(window).on("scroll", function () {
     jQuery('.totop').removeClass('is-show');
   }
 });
-jQuery('.header-nav ul li a').click(function() {
-  jQuery('.header-nav ul li a').removeClass( 'is-active' );
-  jQuery(this).addClass( 'is-active' );
+jQuery('.header-nav ul li a').click(function () {
+  jQuery('.header-nav ul li a').removeClass('is-active');
+  jQuery(this).addClass('is-active');
   return false;
+});
+
+function showThxMessage() {
+// myformの値を取得 ---------------------------
+  let email = document.myForm.emailAddress.value;
+// メールフォームに何かが入力されていた場合 
+  if (email !== '') {
+    var thxDiv = document.getElementById('thxMessage');
+//テキストの中に入力したアドレスを表示
+    thxDiv.getElementsByTagName('span')[0].innerHTML = email;
+//myFormの値をリセット
+    document.myForm.reset();
+// formWrapperで囲んだ範囲を消す
+    document.getElementById('formWrapper').style.display = 'none';
+//送信完了画面を表示
+    thxDiv.style.display = 'grid';
+  }
+}
+
+// JQuery フェードイン ===========================
+$(window).on("scroll", function() {
+//データフェードインをHTMLに付与する
+$('[data-fadeIn]').each(function(index, el) {
+if( $(window).scrollTop() > ( $(el).offset().top - $(window).height() / 2 ) ){
+$(el).addClass('is-over');
+}
+});
 });

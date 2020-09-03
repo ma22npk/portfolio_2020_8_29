@@ -6,7 +6,7 @@
   <!-- 文字コードはutf-8を指定 -->
   <meta charset="UTF-8">
   <!-- スマホやタブレットで表示をするビューポートの記述 -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <!-- ディスクリプションはサイトの説明文。 -->
   <meta name="description" content="松本昂大のポートフォリオサイトです">
   <!-- Reset CSS -->
@@ -21,8 +21,8 @@
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
   <!-- Style CSS -->
   <link href="/CSS/style.css" rel="stylesheet">
-  <link rel=”stylesheet” href=”https://ma22npk.github.io/portfolio_2020_8_29/CSS/style.css”/>
-  <title>Takahiro Portfolio</title>
+  <title>Takahiro Portfolio
+  </title>
 </head>
 
 <body>
@@ -33,18 +33,28 @@
     <ul class="header-list-items">
       <li class="header-list-item ruby-am"><a href="#aboutMe">ABOUT ME</a></li>
       <li class="header-list-item ruby-pf"><a href="#portfolio">PORTFOLIO</a></li>
-      <li class="header-list-item ruby-fl"><a href="#flow">FLOW</a></li>
       <li class="header-list-item ruby-sk"><a href="#skills">SKILLS</a></li>
+      <li class="header-list-item ruby-fl"><a href="#flow">FLOW</a></li>
       <li class="header-list-item ruby-sk"><a href="#contact">CONTACT</a></li>
     </ul>
+    <!-- HTML ハンバーガーメニュー -->
+    <div class="menu-trigger-wrapper">
+      <div class="btn-trigger" id="header-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <!-- HTML /ハンバーガーメニュー -->
   </header><!-- /header -->
   <!-- main -->
   <main>
     <section class="top" id="top">
-      <div class="top-ttl-wrapper">
+      <div class="top-ttl-wrapper animation-zoom-up">
         <h1 class="top-ttl">TAKAHIRO PORTFOLIO</h1>
         <h3 class="top-sub-ttl">WEBサイト制作させてください！</h3>
       </div>
+      <a href="#aboutMe" class="top-icon"><i class="fas fa-angle-double-down"></i></a>
     </section>
     <section class="aboutMe" id="aboutMe">
       <div class="section-ttl-wrapper">
@@ -52,7 +62,7 @@
       </div>
       <div class="aboutMe-items">
         <div class="aboutMe-item-personal">
-          <div class="aboutMe-ttl-wrapper">
+          <div class="aboutMe-ttl-wrapper section-ttl-bar-animation">
             <h2 class="aboutMe-name" id="aboutMe-name">PROFILE</h2>
           </div>
           <div class="aboutMe-profile-wrapper">
@@ -65,16 +75,13 @@
             趣味
             : 料理, 漫画,
             ゲーム<br><br>
-
             長野県出身。料理人として地元の飲食店で<br>修行を積み、自分のお店のHPを作ったり、<br>仕事の効率化をしたいと思い、プログラミングやデザインの勉強を始め、その魅力にどっぷり浸かるように。<br>
             「もっと沢山の人の役に立ちたい！」という<br>気持ちからエンジニアを目指し退職。<br>
-
-
             <!-- <img src="/img/no-img_250_250.png" alt="松本昂大" class="aboutMe-img"> -->
           </div>
         </div>
         <div class="aboutMe-text-wrapper">
-          <div class="aboutMe-img-wrapper" id="aboutMe-img-wrapper"><img src="/img/no-img_250_250.png" alt="松本昂大"
+          <div class="aboutMe-img-wrapper" id="aboutMe-img-wrapper"><img src="/img/about_img.png" alt="松本昂大"
               class="aboutMe-img"></div>
           <div class="aboutMe-description">
             <p class="aboutMe-txt">はじめまして。 本ページをご覧いただきありがとうございます。<br><br>
@@ -88,15 +95,24 @@
     <section class="portfolio" id="portfolio">
       <div class="inner">
         <div class="section-ttl-wrapper">
-          <h3 class="section-ttl">PORTFOLIO</h3>
+          <h3 class="section-ttl" data-zoom-up>PORTFOLIO</h3>
         </div>
         <div class="portfolio-slider-wrap">
           <ul class="portfolio-slider inner">
-            <li><img class="portfolio-slider-img" src="/img/no_image_640_540.png" alt="デイリーレポート"></li>
-            <li><img class="portfolio-slider-img" src="/img/no_image_640_540.png" alt="デイリーレポート"></li>
-            <li><img class="portfolio-slider-img" src="/img/no_image_640_540.png" alt="デイリーレポート"></li>
-            <li><img class="portfolio-slider-img" src="/img/no_image_640_540.png" alt="デイリーレポート"></li>
-            <li><img class="portfolio-slider-img" src="/img/no_image_640_540.png" alt="デイリーレポート"></li>
+            <li class="portfolio-item" id="portfolio-item1"><img class="portfolio-slider-img"
+                src="/img/portfolio_img/bp1_short.png" alt="初めて作ったポートフォリオサイト"></li>
+            <li class="portfolio-item" id="portfolio-item2"><img class="portfolio-slider-img"
+                src="/img/portfolio_img/dt_short.png" alt="マハーバーラタランディングページ"></li>
+            <li class="portfolio-item" id="portfolio-item3"><img class="portfolio-slider-img"
+                src="/img/portfolio_img/hani_short.png" alt="デイトラ中級卒業課題ランディングページ"></li>
+            <li class="portfolio-item" id="portfolio-item4"><img class="portfolio-slider-img"
+                src="/img/portfolio_img/memopy_short.png" alt="自作アプリランディングページ"></li>
+            <li class="portfolio-item" id="portfolio-item5"><img class="portfolio-slider-img"
+                src="/img/portfolio_img/message_short.png" alt="兄の結婚祝いメッセージカード"></li>
+            <li class="portfolio-item" id="portfolio-item6"><img class="portfolio-slider-img"
+                src="/img/portfolio_img/tenshoku_short.png" alt="転職活動用ポートフォリオサイト"></li>
+            <li class="portfolio-item" id="portfolio-item7"><img class="portfolio-slider-img"
+                src="/img/portfolio_img/store_short.png" alt="飲食店ランディングページ"></li>
           </ul>
         </div>
       </div>
@@ -104,49 +120,49 @@
     <section class="skills" id="skills">
       <div class="inner">
         <div class="section-ttl-wrapper">
-          <h3 class="section-ttl">SKILLS</h3>
+          <h3 class="section-ttl" data-zoom-up>SKILLS</h3>
         </div>
         <ul class="skill-items" id="skill-items">
-          <li class="skill-item" id="skill-item">
+          <li class="skill-item" id="skill-item" data-fadeId-right>
             <img src="/img/skill_html.png" alt="HTML&CSS" class="skill-item-img" id="skill-item-img">
             <div class="skill-item-wrapper">
               <h4 class="skill-ttl">HTML & CSS</h4>
-              <p class="skill-txt">テキストテキストテキストテキストテキストテキストテキスト</p>
+              <p class="skill-txt">ゼロからサイトを制作できます。<br>スマートフォン、PCそれぞれに対応したレイアウトで制作可能です。</p>
             </div>
           </li>
-          <li class="skill-item" id="skill-item-sass">
+          <li class="skill-item" id="skill-item-sass" data-fadeId-right>
             <img src="/img/skill_sass.png" alt="SASS" class="skill-item-img" id="skill-item-img-html">
             <div class="skill-item-wrapper">
               <h4 class="skill-ttl">SASS</h4>
-              <p class="skill-txt">テキストテキストテキストテキストテキストテキストテキスト</p>
+              <p class="skill-txt">SASSならではの記法を用いて効率の高いコーディングと保守性の高いサイト制作ができます。</p>
             </div>
           </li>
-          <li class="skill-item" id="skill-item-js">
+          <li class="skill-item" id="skill-item-js" data-fadeId-right>
             <img src="/img/skill_js.png" alt="JavaScript" class="skill-item-img" id="skill-item-img-js">
             <div class="skill-item-wrapper">
               <h4 class="skill-ttl">JavaScript</h4>
-              <p class="skill-txt">テキストテキストテキストテキストテキストテキストテキスト</p>
+              <p class="skill-txt">アニメーションやテキストを変えるなどといった、使いやすくて表情豊かなWEBサイトを表現できます。</p>
             </div>
           </li>
-          <li class="skill-item" id="skill-item-jquery">
+          <li class="skill-item" id="skill-item-jquery" data-fadeId-left>
             <img src="/img/skill_jq.png" alt="jQuery" class="skill-item-img" id="skill-item-img-jq">
             <div class="skill-item-wrapper">
               <h4 class="skill-ttl">JQuery</h4>
-              <p class="skill-txt">テキストテキストテキストテキストテキストテキストテキスト</p>
+              <p class="skill-txt">華やかな演出を表現できるJavaScriptのライブラリを使用できます。このサイトのページ移動などの動きはJQueryで表現しています。</p>
             </div>
           </li>
-          <li class="skill-item" id="skill-item-wordPress">
+          <li class="skill-item" id="skill-item-wordPress" data-fadeId-left>
             <img src="/img/skill_wp.png" alt="WordPress" class="skill-item-img" id="skill-item-img-wp">
             <div class="skill-item-wrapper">
               <h4 class="skill-ttl">WordPress</h4>
-              <p class="skill-txt">テキストテキストテキストテキストテキストテキストテキスト</p>
+              <p class="skill-txt">コーポレートサイトや個人ブログなどに適したWordPressサイトをオリジナルテーマで作成ができます。</p>
             </div>
           </li>
-          <li class="skill-item" id="skill-item-bootstrap">
+          <li class="skill-item" id="skill-item-bootstrap" data-fadeId-left>
             <img src="/img/skill_bs.png" alt="BootStrap" class="skill-item-img" id="skill-item-img-bs">
             <div class="skill-item-wrapper">
               <h4 class="skill-ttl">BootStrap</h4>
-              <p class="skill-txt">テキストテキストテキストテキストテキストテキストテキスト</p>
+              <p class="skill-txt">世界の優秀なデザイナーが作成した有料テーマを使用し、テキストや画像の差し替のみで美しいサイトがスピーディに制作可能です。</p>
             </div>
           </li>
         </ul>
@@ -154,7 +170,7 @@
     </section>
     <section class="flow" id="flow">
       <div class="inner">
-        <div class="section-ttl-wrapper">
+        <div class="section-ttl-wrapper" data-zoom-up>
           <h3 class="section-ttl">FLOW</h3>
         </div>
         <ul class="flow-process-items">
@@ -227,14 +243,15 @@
         <div id="formWrapper">
           <form
             action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSe18u-zueMCpKeQcsZQTV_bUKjLkIhAvBcVhOE9d0N1Roke2w/formResponse"
-            class="contact" method="post" name="myForm" target="dummyIframe" >
+            class="contact" method="post" name="myForm" target="dummyIframe">
             <div class="input-item">
               <label for="name" class="contact-label">お名前</label><input class="input-name" type="text"
                 name="entry.1378749475" autocomplete="name" placeholder="名前（必須）" required>
             </div>
             <div class="input-item">
               <label for="email" class="contact-label">メールアドレス</label><input class="input-email" type="email"
-                name="entry.669084841" value="test@email.com" autocomplete="email" placeholder="メールアドレス（必須）" required>
+                name="entry.669084841" id="contact-email" value="test@email.com" autocomplete="email"
+                placeholder="メールアドレス（必須）" required>
             </div>
             <div class="input-item">
               <label class="contact-label" for="mail-textarea">お問い合わせ内容</label>
@@ -242,14 +259,14 @@
             </div>
             <div class="btn-wrapper"><button class="btn-submit btn" type="submit" value="送信">送信</button></div>
           </form>
-          <iframe name="dummyIframe" style="display:none;" onload="showThxMessage()"></iframe>
+          <iframe id="mail-iframe" name="dummyIframe" style="display:none;"></iframe>
         </div>
-        <div id="thxMessage" class="animated fadeIn">
-<div class="thxMessage-box">
+        <div id="thxMessage">
+          <div class="thxMessage-box">
             <div class="afterformtit">ありがとうございます!</div>
-            <div class="formtxt">お問い合わせ内容を確認後<br>ご記入いただいたメールアドレス<br><span></span>
-              <br>へ返信させていただきます。</div>
-</div>
+            <div class="formtxt">お問い合わせ内容を確認後<br>ご記入いただいたメールアドレス<br><span></span>へ
+              <br>返信させていただきます。</div>
+          </div>
         </div>
       </div>
     </section>
@@ -272,8 +289,123 @@
         <!-- <span><a class="sns-icon"><i class="fab fa-twitter"></i></a></span> -->
         <p class="footer-copy">Copyright-松本昂大, 2020 All Rights Reserved</p>
       </div>
-    </footer><!-- /footer -->
+    </footer>
+    <!---------------------- モーダル ---------------------->
+    <!--------- モーダル【１】 --------->
+    <ul class="modal_area">
+      <!-- モーダル全体の設定 -->
+      <li class="modal_wrap" id="modal1">
+        <!-- モーダルのインナー -->
+        <div class="modal_inner">
+<!-- モーダルタイトル -->
+            <h3 class="modal_title catchCopy">テンプレートHTML使用<br>ポートフォリオサイト</h3>
+          <!-- モーダルイメージ -->
+          <img src="/img/portfolio_modal/bs_long.png" alt="" class="modal_img">
+          <!-- モーダルのテキスト表示部分 -->
+          <div class="modal_txt_area">
+          </div>
+        </div>
+      </li>
+      <!--------- モーダル【2】 --------->
+      <!-- モーダル全体の設定 -->
+      <li class="modal_wrap" id="modal2">
+        <!-- モーダルのインナー -->
+        <div class="modal_inner">
+            <!-- モーダルタイトル -->
+            <h3 class="modal_title catchCopy">【デイトラ最終課題】マハーバーラタランディングページ</h3>
+          <!-- モーダルイメージ -->
+          <img src="/img/portfolio_modal/mahabarata-long.png" alt="マハーバーラタランディングページ" class="modal_img">
+          <!-- モーダルのテキスト表示部分 -->
+          <div class="modal_txt_area">
+          </div>
+        </div>
+      </li>
+      <!--------- モーダル【3】pc画面だとこれがスタート --------->
+      <!-- モーダル全体の設定 -->
+      <li class="modal_wrap" id="modal3">
+        <!-- モーダルのインナー -->
+        <div class="modal_inner">
+<!-- モーダルタイトル -->
+            <h3 class="modal_title catchCopy">【デイトラ中級最終課題】ハニワマンコーポランディングページ</h3>
+          <!-- モーダルイメージ -->
+          <div class="modal-img-wrapper"><img src="/img/portfolio_img/haniwa_long.png" alt="デイトラ中級課題ハニワマンコーポランディングページ" class="modal_img"></div>
+          <!-- モーダルのテキスト表示部分 -->
+          <div class="modal_txt_area">
+          </div>
+          
+        </div>
+      </li>
+      <!--------- モーダル【4】 --------->
+      <!-- モーダル全体の設定 -->
+      <li class="modal_wrap" id="modal4">
+        <!-- モーダルのインナー -->
+        <div class="modal_inner">
+            <!-- モーダルタイトル -->
+            <h3 class="modal_title catchCopy">【自作アプリ】Memopyランディングページ</h3>
+          <!-- モーダルイメージ -->
+          <img src="/img/portfolio_modal/memopy_long.png" alt="自作アプリランディングページ" class="modal_img">
+          <!-- モーダルのテキスト表示部分 -->
+          <div class="modal_txt_area">
 
+            <!-- モーダルのテキスト -->
+          </div>
+
+        </div>
+      </li>
+      <!--------- モーダル【5】 --------->
+      <!-- モーダル全体の設定 -->
+      <li class="modal_wrap" id="modal5">
+        <!-- モーダルのインナー -->
+        <div class="modal_inner">
+            <!-- モーダルタイトル -->
+            <h3 class="modal_title catchCopy">メッセージカード</h3>
+          <!-- モーダルイメージ -->
+          <img src="/img/portfolio_modal/message_long.png" alt="兄の結婚祝いメッセージカード" class="modal_img">
+          <!-- モーダルのテキスト表示部分 -->
+          <div class="modal_txt_area">          
+          </div>
+        </div>
+      </li>
+      <!--------- モーダル【6】 --------->
+      <!-- モーダル全体の設定 -->
+      <li class="modal_wrap" id="modal6">
+        <!-- モーダルのインナー -->
+        <div class="modal_inner">
+<h3 class="modal_title catchCopy">転職活動用ポートフォリオサイト</h3>
+          <!-- モーダルイメージ -->
+          <img src="/img/portfolio_modal/tenshoku_long.png" alt="転職活動用ポートフォリオサイト" class="modal_img">
+          <!-- モーダルのテキスト表示部分 -->
+          <div class="modal_txt_area">
+            <!-- モーダルタイトル -->
+            
+            <!-- モーダルのテキスト -->
+            
+          </div>
+          <!-- クローズボタン -->
+          <div class="modal_close">✖️</div>
+        </div>
+      </li>
+      <!--------- モーダル【7】 --------->
+      <!-- モーダル全体の設定 -->
+      <li class="modal_wrap" id="modal7">
+        <!-- モーダルのインナー -->
+        <div class="modal_inner">
+          <!-- モーダルイメージ -->
+<!-- モーダルタイトル -->
+            <h3 class="modal_title catchCopy">飲食店ランディングページ</h3>
+          <img src="/img/portfolio_img/noimg.png" alt="飲食店ランディングページ" class="modal_img">
+          <!-- モーダルのテキスト表示部分 -->
+          <div class="modal_txt_area">
+            
+          
+            
+          </div>
+          <!-- クローズボタン -->
+          <div class="modal_close">✖️</div>
+        </div>
+      </li>
+    </ul>
+    <!---------------------- モーダル ---------------------->
   </main><!-- /main -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="/js/slick.min.js"></script>

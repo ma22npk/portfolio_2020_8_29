@@ -1,11 +1,24 @@
-// // ハンバーガーメニュー ---------------------------
-// $(function () {
-//   $('.btn-trigger').on('click', function () {
-//     $(this).toggleClass('active');
-//     $('.header-nav').toggleClass('active');
-//     return false;
-//   });
-// });
+/* JQuery ハンバーガーメニュー ==========================*/
+$(function () {
+  $('.btn-trigger').on('click', function () {
+    $(this).toggleClass('active');
+    $('.header-list-items').toggleClass('active');
+    return false;
+  });
+});
+/* JQuery ハンバーガーメニュー ==========================*/
+// トップ背景画像パララックス ===========================
+$(window).on('scroll', function(){
+
+  var scrollTop = $(window).scrollTop();
+  var bgPosition = scrollTop / 2;
+
+  if(bgPosition){
+    $('#top').css('background-position', 'center top -'+ bgPosition + 'px');
+ $('#contact').css('background-position', 'center top -'+ bgPosition + 'px');
+  }
+});
+
 
 // ポートフォリオのスリック実装 ===========================
 //htmlが完全に読み込まれてからでないと、jQueryやJavaScriptは正しく機能しない事がおおい
@@ -28,7 +41,7 @@ $(function () {
     responsive: [{
       breakpoint: 1000,
       settings: {
-        centerPadding: '1%',
+        centerPadding: '0%',
         slidesToShow: 1,
         slidesToScroll: 1,
       }
@@ -88,30 +101,143 @@ jQuery('.header-nav ul li a').click(function () {
   jQuery(this).addClass('is-active');
   return false;
 });
+// JQuery フェードイン ===========================
+$(window).on("scroll", function () {
+  //データフェードインをHTMLに付与する
+  $('[data-fadeIn]').each(function (index, el) {
+    if ($(window).scrollTop() > ($(el).offset().top - $(window).height() / 2)) {
+      $(el).addClass('is-over');
+    }
+  });
+  //データフェードインをHTMLに付与する
+  $('[data-zoom-up]').each(function (index, el) {
+    if ($(window).scrollTop() > ($(el).offset().top - $(window).height() / 2)) {
+      $(el).addClass('data-zoom-up');
+    }
+  });
+  //データフェードイン右をHTMLに付与する
+  $('[data-fadeId-right]').each(function (index, el) {
+    if ($(window).scrollTop() > ($(el).offset().top - $(window).height() / 2)) {
+      $(el).addClass('is-over');
+    }
+  });
+  //データフェードイン右をHTMLに付与する
+  $('[data-fadeId-left]').each(function (index, el) {
+    if ($(window).scrollTop() > ($(el).offset().top - $(window).height() / 2)) {
+      $(el).addClass('is-over');
+    }
+  });
 
-function showThxMessage() {
-// myformの値を取得 ---------------------------
-  let email = document.myForm.emailAddress.value;
-// メールフォームに何かが入力されていた場合 
+});
+
+
+// 送信フォーム ===========================
+const thxDiv = document.getElementById('thxMessage');
+document.getElementById('mail-iframe').onload = (function () {
+  // myformの値を取得 ---------------------------
+  let email = document.getElementById('contact-email').value;
+  // メールフォームに何かが入力されていた場合 
   if (email !== '') {
-    var thxDiv = document.getElementById('thxMessage');
-//テキストの中に入力したアドレスを表示
+
+    //テキストの中に入力したアドレスを表示
     thxDiv.getElementsByTagName('span')[0].innerHTML = email;
-//myFormの値をリセット
+    //myFormの値をリセット
     document.myForm.reset();
-// formWrapperで囲んだ範囲を消す
-    document.getElementById('formWrapper').style.display = 'none';
-//送信完了画面を表示
+    // formWrapperで囲んだ範囲を消す
+    //document.getElementById('formWrapper').style.display = 'none';
+    //送信完了画面を表示
     thxDiv.style.display = 'grid';
   }
-}
-
-// JQuery フェードイン ===========================
-$(window).on("scroll", function() {
-//データフェードインをHTMLに付与する
-$('[data-fadeIn]').each(function(index, el) {
-if( $(window).scrollTop() > ( $(el).offset().top - $(window).height() / 2 ) ){
-$(el).addClass('is-over');
-}
 });
+
+// モーダルを非表示 ---------------------------
+thxDiv.addEventListener('click', () => {
+  thxDiv.style.display = "none";
+})
+
+
+// ポートフォリオのアニメ ===========================
+// モーダル1
+$(function () {
+  // モーダルのボタンをクリックした時
+  $('#portfolio-item1').on('click', function (e) { //eタグはeventのこと
+    //モーダルをフェードで表示// クリックしたモーダルボタンと同じ番目のモーダルを表示する
+    $('#modal1').fadeToggle();
+  });
+  // ×やモーダルの背景をクリックした時
+  $('.modal_wrap, .modal_close').on('click', (function () {
+    $('.modal_wrap').fadeOut(); // モーダルを非表示にする
+  }));
+});
+// モーダル2
+$(function () {
+  // モーダルのボタンをクリックした時
+  $('#portfolio-item2').on('click', function (e) { //eタグはeventのこと
+    //モーダルをフェードで表示// クリックしたモーダルボタンと同じ番目のモーダルを表示する
+    $('#modal2').fadeToggle();
+  });
+  // ×やモーダルの背景をクリックした時
+  $('.modal_wrap, .modal_close').on('click', (function () {
+    $('.modal_wrap').fadeOut(); // モーダルを非表示にする
+  }));
+});
+// モーダル3
+$(function () {
+  // モーダルのボタンをクリックした時
+  $('#portfolio-item3').on('click', function (e) { //eタグはeventのこと
+    //モーダルをフェードで表示// クリックしたモーダルボタンと同じ番目のモーダルを表示する
+    $('#modal3').fadeToggle();
+  });
+  // ×やモーダルの背景をクリックした時
+  $('.modal_wrap, .modal_close').on('click', (function () {
+    $('.modal_wrap').fadeOut(); // モーダルを非表示にする
+  }));
+});
+// モーダル4
+$(function () {
+  // モーダルのボタンをクリックした時
+  $('#portfolio-item4').on('click', function (e) { //eタグはeventのこと
+    //モーダルをフェードで表示// クリックしたモーダルボタンと同じ番目のモーダルを表示する
+    $('#modal4').fadeToggle();
+  });
+  // ×やモーダルの背景をクリックした時
+  $('.modal_wrap, .modal_close').on('click', (function () {
+    $('.modal_wrap').fadeOut(); // モーダルを非表示にする
+  }));
+});
+// モーダル5
+$(function () {
+  // モーダルのボタンをクリックした時
+  $('#portfolio-item5').on('click', function (e) { //eタグはeventのこと
+    //モーダルをフェードで表示// クリックしたモーダルボタンと同じ番目のモーダルを表示する
+    $('#modal5').fadeToggle();
+  });
+  // ×やモーダルの背景をクリックした時
+  $('.modal_wrap, .modal_close').on('click', (function () {
+    $('.modal_wrap').fadeOut(); // モーダルを非表示にする
+  }));
+});
+// モーダル6
+$(function () {
+  // モーダルのボタンをクリックした時
+  $('#portfolio-item6').on('click', function (e) { //eタグはeventのこと
+    //モーダルをフェードで表示// クリックしたモーダルボタンと同じ番目のモーダルを表示する
+    $('#modal6').fadeToggle();
+  });
+  // ×やモーダルの背景をクリックした時
+  $('.modal_wrap, .modal_close').on('click', (function () {
+    $('.modal_wrap').fadeOut(); // モーダルを非表示にする
+  }));
+});
+// モーダル7
+$(function () {
+  // モーダルのボタンをクリックした時
+  $('#portfolio-item7').on('click', function (e) { //eタグはeventのこと
+    //モーダルをフェードで表示// クリックしたモーダルボタンと同じ番目のモーダルを表示する
+    $('#modal7').fadeToggle();
+  });
+  // ×やモーダルの背景をクリックした時
+  $('.modal_wrap, .modal_close').on('click', (function () {
+    $('.modal_wrap').fadeOut(); // モーダルを非表示にする
+  }));
 });

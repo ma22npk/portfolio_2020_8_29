@@ -2,13 +2,19 @@
 <!-- 日本語サイトであることの宣言 -->
 <html lang="ja">
 
-<head>
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/ fb# prefix属性: http://ogp.me/ns/ prefix属性#">
   <!-- 文字コードはutf-8を指定 -->
   <meta charset="UTF-8">
   <!-- スマホやタブレットで表示をするビューポートの記述 -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <!-- ディスクリプションはサイトの説明文。 -->
-  <meta name="description" content="松本昂大のポートフォリオサイトです">
+  <meta property="og:url" content="http://matsumoto202009.com/" />
+  <meta property="og:type" content="product" />
+  <meta property="og:title" content="Portfolio" />
+  <meta property="og:description" content="WEB制作のお仕事をさせていただいている、私のポートフォリオサイトです" />
+  <meta property="og:site_name" content="Portfolio" />
+  <meta property="og:image"
+    content="https://drive.google.com/file/d/1vkhmf1yc4WdvmQZa2FSTs1Ng-OUUcIP1/view?usp=sharing" />
+  <link rel="shortcut icon" href="/img/favicon.ico.png" type="image/x-icon">
   <!-- Reset CSS -->
   <link href="/CSS/reset.css" rel="stylesheet">
   <!-- Google Font -->
@@ -21,7 +27,7 @@
   <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
   <!-- Style CSS -->
   <link href="/CSS/style.css" rel="stylesheet">
-  <title>Takahiro Portfolio
+  <title>Portfolio
   </title>
 </head>
 
@@ -276,15 +282,6 @@
     </a>
     <!-- /HTMLコロリン -->
     <footer class="footer">
-      <div class="footer-top">
-        <ul class="footer-list-items">
-          <li class="footer-list-item ruby-am"><a href="#aboutMe">ABOUT ME</a></li>
-          <li class="footer-list-item ruby-pf"><a href="#portfolio">PORTFOLIO</a></li>
-          <li class="footer-list-item ruby-fl"><a href="#flow">FLOW</a></li>
-          <li class="footer-list-item ruby-sk"><a href="#skills">SKILLS</a></li>
-          <li class="footer-list-item ruby-sk"><a href="#contact">CONTACT</a></li>
-        </ul>
-      </div>
       <div class="footer-bottom">
         <!-- <span><a class="sns-icon"><i class="fab fa-twitter"></i></a></span> -->
         <p class="footer-copy">Copyright-松本昂大, 2020 All Rights Reserved</p>
@@ -297,8 +294,8 @@
       <li class="modal_wrap" id="modal1">
         <!-- モーダルのインナー -->
         <div class="modal_inner">
-<!-- モーダルタイトル -->
-            <h3 class="modal_title catchCopy">テンプレートHTML使用<br>ポートフォリオサイト</h3>
+          <!-- モーダルタイトル -->
+          <h3 class="modal_title catchCopy">テンプレートHTML使用<br>ポートフォリオサイト</h3>
           <!-- モーダルイメージ -->
           <img src="/img/portfolio_modal/bs_long.png" alt="" class="modal_img">
           <!-- モーダルのテキスト表示部分 -->
@@ -311,8 +308,8 @@
       <li class="modal_wrap" id="modal2">
         <!-- モーダルのインナー -->
         <div class="modal_inner">
-            <!-- モーダルタイトル -->
-            <h3 class="modal_title catchCopy">【デイトラ最終課題】マハーバーラタランディングページ</h3>
+          <!-- モーダルタイトル -->
+          <h3 class="modal_title catchCopy">【デイトラ最終課題】マハーバーラタランディングページ</h3>
           <!-- モーダルイメージ -->
           <img src="/img/portfolio_modal/mahabarata-long.png" alt="マハーバーラタランディングページ" class="modal_img">
           <!-- モーダルのテキスト表示部分 -->
@@ -325,14 +322,15 @@
       <li class="modal_wrap" id="modal3">
         <!-- モーダルのインナー -->
         <div class="modal_inner">
-<!-- モーダルタイトル -->
-            <h3 class="modal_title catchCopy">【デイトラ中級最終課題】ハニワマンコーポランディングページ</h3>
+          <!-- モーダルタイトル -->
+          <h3 class="modal_title catchCopy">【デイトラ中級最終課題】ハニワマンコーポランディングページ</h3>
           <!-- モーダルイメージ -->
-          <div class="modal-img-wrapper"><img src="/img/portfolio_img/haniwa_long.png" alt="デイトラ中級課題ハニワマンコーポランディングページ" class="modal_img"></div>
+          <div class="modal-img-wrapper"><img src="/img/portfolio_img/haniwa_long.png" alt="デイトラ中級課題ハニワマンコーポランディングページ"
+              class="modal_img"></div>
           <!-- モーダルのテキスト表示部分 -->
           <div class="modal_txt_area">
           </div>
-          
+
         </div>
       </li>
       <!--------- モーダル【4】 --------->
@@ -340,8 +338,8 @@
       <li class="modal_wrap" id="modal4">
         <!-- モーダルのインナー -->
         <div class="modal_inner">
-            <!-- モーダルタイトル -->
-            <h3 class="modal_title catchCopy">【自作アプリ】Memopyランディングページ</h3>
+          <!-- モーダルタイトル -->
+          <h3 class="modal_title catchCopy">【自作アプリ】Memopyランディングページ</h3>
           <!-- モーダルイメージ -->
           <img src="/img/portfolio_modal/memopy_long.png" alt="自作アプリランディングページ" class="modal_img">
           <!-- モーダルのテキスト表示部分 -->
@@ -357,12 +355,12 @@
       <li class="modal_wrap" id="modal5">
         <!-- モーダルのインナー -->
         <div class="modal_inner">
-            <!-- モーダルタイトル -->
-            <h3 class="modal_title catchCopy">メッセージカード</h3>
+          <!-- モーダルタイトル -->
+          <h3 class="modal_title catchCopy">メッセージカード</h3>
           <!-- モーダルイメージ -->
           <img src="/img/portfolio_modal/message_long.png" alt="兄の結婚祝いメッセージカード" class="modal_img">
           <!-- モーダルのテキスト表示部分 -->
-          <div class="modal_txt_area">          
+          <div class="modal_txt_area">
           </div>
         </div>
       </li>
@@ -371,15 +369,13 @@
       <li class="modal_wrap" id="modal6">
         <!-- モーダルのインナー -->
         <div class="modal_inner">
-<h3 class="modal_title catchCopy">転職活動用ポートフォリオサイト</h3>
+          <h3 class="modal_title catchCopy">転職活動用ポートフォリオサイト</h3>
           <!-- モーダルイメージ -->
           <img src="/img/portfolio_modal/tenshoku_long.png" alt="転職活動用ポートフォリオサイト" class="modal_img">
           <!-- モーダルのテキスト表示部分 -->
           <div class="modal_txt_area">
             <!-- モーダルタイトル -->
-            
             <!-- モーダルのテキスト -->
-            
           </div>
           <!-- クローズボタン -->
           <div class="modal_close">✖️</div>
@@ -391,14 +387,11 @@
         <!-- モーダルのインナー -->
         <div class="modal_inner">
           <!-- モーダルイメージ -->
-<!-- モーダルタイトル -->
-            <h3 class="modal_title catchCopy">飲食店ランディングページ</h3>
+          <!-- モーダルタイトル -->
+          <h3 class="modal_title catchCopy">飲食店ランディングページ</h3>
           <img src="/img/portfolio_img/noimg.png" alt="飲食店ランディングページ" class="modal_img">
           <!-- モーダルのテキスト表示部分 -->
           <div class="modal_txt_area">
-            
-          
-            
           </div>
           <!-- クローズボタン -->
           <div class="modal_close">✖️</div>

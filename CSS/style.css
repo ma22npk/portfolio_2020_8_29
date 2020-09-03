@@ -613,6 +613,7 @@ section#contact.contact div.section-contact-ttl-wrapper {
 }
 
 section#contact.contact div.section-contact-ttl-wrapper h3.section-contact-ttl {
+  font-family: "Calligraffitti";
   -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
   width: 680px;
@@ -1121,7 +1122,7 @@ div#thxMessage .thxMessage-box div.formtxt span {
   #top.top .top-ttl-wrapper .top-ttl {
     display: block;
     font-family: "Calligraffitti";
-    font-size: 60px;
+    font-size: 40px;
     padding: 28px 0 10px;
     font-weight: 600;
     color: #fff;
@@ -1130,7 +1131,7 @@ div#thxMessage .thxMessage-box div.formtxt span {
   #top.top .top-ttl-wrapper .top-sub-ttl {
     font-family: "Open Sans", sans-serif;
     width: 100%;
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 600;
     color: #8cbee8;
     padding: 10px;
@@ -1166,7 +1167,7 @@ div#thxMessage .thxMessage-box div.formtxt span {
   }
   .section-ttl-wrapper .section-ttl {
     margin-top: 40px;
-    font-size: 48px;
+    font-size: 40px;
     color: #8cbee8;
     font-family: "Calligraffitti";
     font-weight: bold;
@@ -1482,7 +1483,7 @@ div#thxMessage .thxMessage-box div.formtxt span {
     -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
     width: 90%;
-    font-size: 40px;
+    font-size: 32px;
     background-color: #8cbee8;
     color: #fff;
     padding: 20px 20px 20px;

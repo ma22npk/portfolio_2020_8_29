@@ -568,6 +568,7 @@ section#contact.contact {
     margin: 40px 0 40px 0;
 
     h3.section-contact-ttl {
+      font-family: $fontFamilyLogo;
       box-shadow: $boxShadowGoogleCard;
       width: 680px;
       font-size: 40px;
@@ -1029,7 +1030,7 @@ div#thxMessage {
     height: 600px;
     display: grid;
     place-items: center;
-background-color: $backGroundMain;
+    background-color: $backGroundMain;
 
     .top-ttl-wrapper {
       box-shadow: $boxShadowGoogleCard;
@@ -1044,7 +1045,7 @@ background-color: $backGroundMain;
       .top-ttl {
         display: block;
         font-family: "Calligraffitti";
-        font-size: 60px;
+        font-size: 40px;
         padding: 28px 0 10px;
         font-weight: 600;
         color: $fontColorPrimary;
@@ -1054,7 +1055,7 @@ background-color: $backGroundMain;
       .top-sub-ttl {
         font-family: $fontFamilyPrimary;
         width: 100%;
-        font-size: 24px;
+        font-size: 18px;
         font-weight: 600;
         color: $fontColorSecondary;
         padding: 10px;
@@ -1096,7 +1097,7 @@ background-color: $backGroundMain;
 
     .section-ttl {
       margin-top: 40px;
-      font-size: 48px;
+      font-size: 40px;
       color: $fontColorSecondary;
       font-family: $fontFamilyLogo;
       font-weight: bold;
@@ -1416,7 +1417,7 @@ background-color: $backGroundMain;
       h3.section-contact-ttl {
         box-shadow: $boxShadowGoogleCard;
         width: 90%;
-        font-size: 40px;
+        font-size: 32px;
         background-color: $backGroundAccent;
         color: $fontColorPrimary;
         padding: 20px 20px 20px;
@@ -1635,10 +1636,8 @@ background-color: $backGroundMain;
 
         span {
           font: 16px;
-
         }
       }
     }
-
   }
 }

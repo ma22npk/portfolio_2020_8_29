@@ -419,7 +419,7 @@ div.inner {
 
 .portfolio-item {
   cursor: pointer;
-  padding: 2%;
+  padding: 10% 2%;
   height: auto;
   margin: 0 auto;
   transition: all .4s;
@@ -563,6 +563,7 @@ section#contact.contact {
   background-image: url(/img/contact-bg.png);
   background-size: 150%;
   height: 1000px;
+  background-position: center left;
 
   div.section-contact-ttl-wrapper {
     margin: 40px 0 40px 0;
@@ -649,73 +650,19 @@ section#contact.contact {
 }
 
 /* フッター ==========================*/
-footer.footer {
+footer {
   width: 100%;
   padding: 20px 0px;
-  background-color: $backGroundMain;
-  height: auto;
-
-  div.footer-top {
-    .footer-list-items {
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-
-      .footer-list-item {
-        margin-right: 20px;
-
-        a {
-          display: grid;
-          place-items: center;
-          font-size: 12px;
-          color: $fontColorSecondary;
-          font-weight: bold;
-          width: 90px;
-          height: 90px;
-          border-radius: 100px;
-          box-shadow: $boxShadowGoogleApp;
-          transition: all 0.2s;
-
-          &:hover {
-            transform: scale(1.05);
-          }
-
-          &:active {
-            box-shadow: $boxShadowGoogleCard;
-
-          }
-        }
-      }
-    }
-
-  }
-
-  div.footer-bottom {
-    padding: 20px;
-
-    p.footer-copy {
-      font-style: 8px;
-      color: $fontColorSecondary;
-      text-align: center;
-    }
-  }
-}
-
-a.sns-icon {
-  width: 40px;
-  display: grid;
-  place-items: center;
-  border-radius: 100px;
   background-color: $fontColorSecondary;
-  height: 40px;
+  height: auto;
+  color: #FFF;
+  text-align: center;
 
-  i.fab.fa-twitter {
-    color: #FFF;
-    font-size: 24px;
-    line-height: 40px;
+  .footer-copy {
+    opacity: 0.8;
   }
 }
+
 
 /* CSS サークルバナー ==========================*/
 .btn-wrapper {
@@ -764,7 +711,7 @@ a.sns-icon {
   left: 0;
   width: 100%;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(#fff, 0.5);
   z-index: 10001;
   display: none;
 }
@@ -772,16 +719,17 @@ a.sns-icon {
 /* モーダル内のインナー（本体） */
 
 .modal_inner {
-  padding: 40px;
+  padding: 40px 0 200px;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   background: rgba(255, 255, 255, 0.95);
   position: absolute;
-  width: 60%;
+  width: 80%;
   height: auto;
-  top: 10%;
+  top: 5%;
   left: 50%;
+  bottom: 5%;
   transform: translate(-50%);
   max-height: 100%;
   overflow-y: auto;
@@ -800,7 +748,7 @@ a.sns-icon {
 
 .modal_img {
   width: 60%;
-  height: 60%;
+  height: auto;
   margin: 0 auto;
 }
 

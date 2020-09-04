@@ -446,7 +446,7 @@ div.inner {
 
 .portfolio-item {
   cursor: pointer;
-  padding: 2%;
+  padding: 10% 2%;
   height: auto;
   margin: 0 auto;
   -webkit-transition: all .4s;
@@ -606,6 +606,7 @@ section#contact.contact {
   background-image: url(/img/contact-bg.png);
   background-size: 150%;
   height: 1000px;
+  background-position: center left;
 }
 
 section#contact.contact div.section-contact-ttl-wrapper {
@@ -701,79 +702,17 @@ section#contact.contact div.inner.form-item-wrapper form.contact .input-item tex
 }
 
 /* フッター ==========================*/
-footer.footer {
+footer {
   width: 100%;
   padding: 20px 0px;
-  background-color: #fee898;
+  background-color: #8cbee8;
   height: auto;
-}
-
-footer.footer div.footer-top .footer-list-items {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-footer.footer div.footer-top .footer-list-items .footer-list-item {
-  margin-right: 20px;
-}
-
-footer.footer div.footer-top .footer-list-items .footer-list-item a {
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
-  font-size: 12px;
-  color: #8cbee8;
-  font-weight: bold;
-  width: 90px;
-  height: 90px;
-  border-radius: 100px;
-  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-}
-
-footer.footer div.footer-top .footer-list-items .footer-list-item a:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-}
-
-footer.footer div.footer-top .footer-list-items .footer-list-item a:active {
-  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
-          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
-}
-
-footer.footer div.footer-bottom {
-  padding: 20px;
-}
-
-footer.footer div.footer-bottom p.footer-copy {
-  font-style: 8px;
-  color: #8cbee8;
+  color: #FFF;
   text-align: center;
 }
 
-a.sns-icon {
-  width: 40px;
-  display: -ms-grid;
-  display: grid;
-  place-items: center;
-  border-radius: 100px;
-  background-color: #8cbee8;
-  height: 40px;
-}
-
-a.sns-icon i.fab.fa-twitter {
-  color: #FFF;
-  font-size: 24px;
-  line-height: 40px;
+footer .footer-copy {
+  opacity: 0.8;
 }
 
 /* CSS サークルバナー ==========================*/
@@ -827,14 +766,14 @@ a.sns-icon i.fab.fa-twitter {
   left: 0;
   width: 100%;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.5);
   z-index: 10001;
   display: none;
 }
 
 /* モーダル内のインナー（本体） */
 .modal_inner {
-  padding: 40px;
+  padding: 40px 0 200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -846,10 +785,11 @@ a.sns-icon i.fab.fa-twitter {
       flex-wrap: nowrap;
   background: rgba(255, 255, 255, 0.95);
   position: absolute;
-  width: 60%;
+  width: 80%;
   height: auto;
-  top: 10%;
+  top: 5%;
   left: 50%;
+  bottom: 5%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
   max-height: 100%;
@@ -868,7 +808,7 @@ a.sns-icon i.fab.fa-twitter {
 
 .modal_img {
   width: 60%;
-  height: 60%;
+  height: auto;
   margin: 0 auto;
 }
 

@@ -8,14 +8,14 @@ $(function () {
 });
 /* JQuery ハンバーガーメニュー ==========================*/
 // トップ背景画像パララックス ===========================
-$(window).on('scroll', function(){
+$(window).on('scroll', function () {
 
   var scrollTop = $(window).scrollTop();
   var bgPosition = scrollTop / 2;
 
-  if(bgPosition){
-    $('#top').css('background-position', 'center top -'+ bgPosition + 'px');
- $('#contact').css('background-position', 'center top -'+ bgPosition + 'px');
+  if (bgPosition) {
+    $('#top').css('background-position', 'center top -' + bgPosition + 'px');
+    $('#contact').css('background-position', 'center top -' + bgPosition + 'px');
   }
 });
 
